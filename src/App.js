@@ -10,6 +10,8 @@ import { PostsList } from './features/posts/postsList'
 import { AddPostForm } from './features/posts/AddPostForm'
 import { SinglePostPage } from './features/posts/SinglePostPage'
 import { EditPostForm } from './features/posts/EditPostForm'
+import { UsersList } from './features/users/UsersList'
+import { UserPage } from './features/users/UserPage'
 
 import { Navbar } from './app/Navbar'
 
@@ -38,6 +40,16 @@ function App() {
             exact
             path="/editPost/:postId"
             component={EditPostForm}
+          />
+          <Route
+            exact
+            path="/users"
+            component={UsersList}
+          />
+          <Route
+            exact
+            path="/users/:userId"
+            component={UserPage}
           />
           <Redirect to="/" />
         </Switch>
